@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import './layout.css';
 import $ from 'jquery'
+import {BrowserRouter as Router, Route , Switch} from 'react-router-dom'
 
-import Header from '../header/header'
-import About from '../aboutMe/aboutMe'
+import Home from '../home/home'
 
 export default class layout extends Component {
   componentDidMount(){
@@ -18,6 +18,7 @@ export default class layout extends Component {
   }
   render() {
     return (
+      <Router>
       <div>
         <div className="page">
           <span className="menu_toggle">
@@ -40,12 +41,15 @@ export default class layout extends Component {
           </ul>
           <main className="content">
             <div className="content_inner">
-             <Header/>
-             <About/> 
+              <Switch>
+              <Route path='/' exact component={Home} />
+              <Route path='/home' component={Home} />
+              </Switch>
             </div>
           </main>
         </div>
       </div>
+      </Router>
     );
   }
 }
