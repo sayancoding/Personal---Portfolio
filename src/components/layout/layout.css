@@ -23,7 +23,7 @@
   cursor: pointer;
   width: 100px;
   height: 80px;
-  background-color: #000592;
+  background-color: #3C40C6;
   border-bottom-right-radius: 100%;
 }
 .menu_toggle:active i {
@@ -50,7 +50,7 @@
 .menu_items {
   position: fixed;
   bottom: 0;
-  left: 50px;
+  left: 20px;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -61,7 +61,7 @@
   transform: translateX(-300px);
   transition: transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1);
 }
-.menu_items li:nth-child(2) {
+/* .menu_items li:nth-child(2) {
   margin-left: 20px;
 }
 .menu_items li:nth-child(3) {
@@ -69,7 +69,7 @@
 }
 .menu_items li:nth-child(4) {
   margin-left: 48px;
-}
+} */
 .menu_items li {
   display: block;
   text-decoration: none;
@@ -82,7 +82,7 @@
   position: relative;
   display: inline-block;
   margin-right: 12px;
-  color: #161bad;
+  color: #3C40C6;
 }
 .menu_items a .icon:after {
   position: absolute;
@@ -95,18 +95,18 @@
   margin-left: -33px;
   margin-top: -32px;
   border-radius: 100%;
-  border: 2px solid #000592;
+  border: 2px solid #3C40C6;
   transition: border-color 0.2s;
 }
 .menu_items li:hover {
-  color: #000592;
+  color: #3C40C6;
   cursor: pointer;
 }
 .menu_items li:hover .icon:after {
-  border-color: #2b30b1;
+  border-color: #3C40C6;
 }
 .menu_items li:active .icon {
-  color: #393daa;
+  color: #3C40C6;
 }
 /* Let's open up the menu */
 .shazam {

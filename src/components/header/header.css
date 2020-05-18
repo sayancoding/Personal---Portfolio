@@ -1,19 +1,17 @@
 .tiny-text{
   padding-top: 6%;
-  color: #3f0092;
+  color: #330075;
   font-family: 'Roboto Mono', monospace;
 }
 .upper-text{
   font-size: 5rem;
   font-weight: bold;
-  color: #6600db;
+  color: #3C40C6;
 }
 .middle-text{
   color: #6600dbc7;
   font-size: 3rem;
   animation: type 3.5s ease-in-out;
-  /* border-right: 6px solid;
-  border-right-color: rgb(104, 104, 104); */
   display: inline-block;
   height: 4rem;
   overflow: hidden;
@@ -26,4 +24,21 @@
   100%{
     width: 100%;
   }
+}
+.btn-area{
+  margin-top: 4rem;
+}
+.btn{
+  background-color: #ffff;
+  border: 2px solid #3C40C6;
+  padding: 12px 20px;
+  border-radius: 4px;
+  letter-spacing: 2px;
+  color: #330075;
+}
+.designation-text{
+  margin-top: 2rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #3C40C6;
 }
