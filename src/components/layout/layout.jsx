@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import './layout.css';
 import $ from 'jquery'
-import Header from '../../components/header/header'
+
+import Header from '../header/header'
+import About from '../aboutMe/aboutMe'
 
 export default class layout extends Component {
   componentDidMount(){
@@ -38,7 +40,8 @@ export default class layout extends Component {
           </ul>
           <main className="content">
             <div className="content_inner">
-             <Header/> 
+             <Header/>
+             <About/> 
             </div>
           </main>
         </div>
