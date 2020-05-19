@@ -7,13 +7,20 @@ export default class skillCard extends Component {
       <div>
         <div className="skill_card">
           <div className="text">
-            <p className="skill_title">Programming Language</p>
+    <p className="skill_title">{this.props.name}</p>
             <div className="skill_set">
-              <p>Java</p>
+              {
+                this.props.skillSet.map(el=>{
+                  return(
+                  <p>{el}</p>
+                  )
+                })
+              }
+              {/* <p>Java</p>
               <p>Javascript</p>
               <p>Typescript</p>
               <p>SQL</p>
-              <p>dart</p>
+              <p>dart</p> */}
             </div>
           </div>
         </div>
