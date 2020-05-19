@@ -48,3 +48,12 @@
   text-transform: uppercase;
   color: #3C40C6;
 }
+
+@media only screen and (max-width: 600px){
+  .middle-text{
+    overflow: visible;
+    font-size: 2rem;
+    width: 100%;
+    animation: none;
+  }
+}

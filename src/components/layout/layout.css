@@ -84,19 +84,8 @@
   margin-right: 12px;
   color: #3C40C6;
 }
-.menu_items a .icon:after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  content: '';
-  display: block;
-  width: 60px;
-  height: 60px;
-  margin-left: -33px;
-  margin-top: -32px;
-  border-radius: 100%;
-  border: 2px solid #3C40C6;
-  transition: border-color 0.2s;
+.menu_items a {
+  text-decoration: none;
 }
 .menu_items li:hover {
   color: #3C40C6;

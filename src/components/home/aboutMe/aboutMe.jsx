@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
 import './aboutMe.css'
+import Aos from "aos";
+import "aos/dist/aos.css";
 import Profile from '../../../assets/images/person.png'
 
 export default class aboutMe extends Component {
+  componentDidMount(){
+    Aos.init({duration:900})
+  }
   render() {
     return (
       <div className="about">
-        <div className="text">
+        <div data-aos="fade-left" className="text">
           <div className="heading">About me</div>
-          <div className="lower-text">
+          <div className="lower-text" data-aos="fade-up">
             Hello, I'm a self-taught web Developer from West Bengal, India.
             <br />
             <p className="mid-text">
@@ -23,13 +28,13 @@ export default class aboutMe extends Component {
               basis.
             </p>
           </div>
-          <div className="explore">
+          <button className="explore">
             Expand <i className="icon fas fa-expand-alt"></i>
-          </div>
+          </button>
         </div>
         <div className="image">
           <div className="_image">
-          <img className="" src={Profile} alt="profile" />
+            <img className="" src={Profile} alt="profile" />
           </div>
         </div>
       </div>
