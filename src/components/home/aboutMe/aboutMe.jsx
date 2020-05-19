@@ -32,7 +32,7 @@ export default class aboutMe extends Component {
             Expand <i className="icon fas fa-expand-alt"></i>
           </button>
         </div>
-        <div className="image">
+        <div className="image" data-aos="fade">
           <div className="_image">
             <img className="" src={Profile} alt="profile" />
           </div>

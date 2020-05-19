@@ -4,6 +4,7 @@ import $ from 'jquery'
 import {BrowserRouter as Router, Route , Switch, Link} from 'react-router-dom'
 
 import Home from '../home/home'
+import Skills from '../skills/skills'
 
 export default class layout extends Component {
   componentDidMount(){
@@ -32,13 +33,19 @@ export default class layout extends Component {
                 </Link>
               </li>
               <li>
+                <Link to="/skills">
                 <i className="icon fas fa-address-card"></i> About - Skills
+                </Link>
               </li>
               <li>
+                <Link to="/works">
                 <i className="icon fas fa-project-diagram"></i> Works
+                </Link>
               </li>
               <li>
+                <Link to="/contact">
                 <i className="icon fas fa-mail-bulk"></i> Contact
+                </Link>
               </li>
             </ul>
             <main className="content">
@@ -46,6 +53,9 @@ export default class layout extends Component {
                 <Switch>
                   <Route path="/" exact component={Home} />
                   <Route path="/home" component={Home} />
+                  <Route path="/skills" component={Skills} />
+                  <Route path="/works" component={Skills} />
+                  <Route path="/contact" component={Skills} />
                 </Switch>
               </div>
             </main>
