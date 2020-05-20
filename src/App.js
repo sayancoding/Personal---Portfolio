@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import Layout from './components/layout/layout'
 import Preloader from './components/preloader/preloader'
-import $ from 'jquery'
+
  class App extends Component {
    state={
-     landing:true
+     landing:false
    }
    componentDidMount(){
      setTimeout(() => {
