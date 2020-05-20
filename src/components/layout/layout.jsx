@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route , Switch, Link} from 'react-router-dom'
 
 import Home from '../home/home'
 import Skills from '../skills/skills'
+import Preloader from '../preloader/preloader'
 
 export default class layout extends Component {
   componentDidMount(){
@@ -15,6 +16,9 @@ export default class layout extends Component {
     });
     $(".content").on("click", function () {
       $page.removeClass("shazam");
+    });
+    $("li").on("click", function () {
+      $page.toggleClass("shazam");
     });
   }
   render() {
@@ -34,7 +38,7 @@ export default class layout extends Component {
               </li>
               <li>
                 <Link to="/skills">
-                <i className="icon fas fa-address-card"></i> About - Skills
+                <i className="icon fas fa-address-card"></i>Proficiency
                 </Link>
               </li>
               <li>

@@ -1,6 +1,6 @@
 .skill_card{
   position: relative;
-  margin-left: 1.8rem;
+  margin-right: 1.8rem;
   margin-bottom: 1.6rem;
   width: 240px;
   height: 280px;
@@ -31,13 +31,28 @@
   text-align: center;
 }
 .skill_card .text .skill_title{
+  position: absolute;
   font-size: 1.4rem;
   color: #ffff;
   padding: 0 4px;
   text-align: center;
+  transform: translateY(-40%);
 }
+
+.skill_card .text::before{
+  content: '';
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: rgba(172, 166, 255, 0.205);
+  transform: translate(-130%,-60%);
+  transition: 0.5s ease-in-out;
+}
+
 .skill_card .text .skill_set{
   transform: translateY(40%);
+    padding-top: 12px;
 }
 .skill_card .text .skill_set p{
   font-size: 0.9rem;
@@ -47,6 +62,11 @@
 
 .skill_card:hover:before{
   clip-path: circle(166px at 65% -18%);
+}
+.skill_card:hover .text:before{
+  width: 12rem;
+  height: 12rem;
+  transform: translate(-120%,-70%);
 }
 .skill_card:focus:before{
   clip-path: circle(166px at 65% -20%);

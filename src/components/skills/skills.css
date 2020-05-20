@@ -14,7 +14,7 @@
   height: 4rem;
   border-radius: 50%;
   transform: translate(-20%,-40%);
-  background: rgba(4, 71, 255, 0.288);
+  background: rgba(16, 75, 236, 0.397);
 }
 .skill_heading::after{
   content: "";
@@ -23,7 +23,7 @@
     height: 4px;
     border-radius: 12px;
     width: 200px;
-    background-color: rgba(4, 71, 255, 0.288);
+    background-color: rgba(16, 75, 236, 0.397);
     transform: translate(40%,0%);
 }
 
@@ -33,6 +33,7 @@
 }
 
 .skill_area{
+  position: relative;
   margin-top: 4rem;
 }
 .skill_row{
