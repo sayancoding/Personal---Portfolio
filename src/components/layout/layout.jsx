@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route , Switch, Link} from 'react-router-dom'
 
 import Home from '../home/home'
 import Skills from '../skills/skills'
+import Works from '../../containers/works/works'
 
 export default class layout extends Component {
   componentDidMount(){
@@ -37,17 +38,17 @@ export default class layout extends Component {
               </li>
               <li>
                 <Link to="/skills">
-                <i className="icon fas fa-address-card"></i>Proficiency
+                  <i className="icon fas fa-address-card"></i>Proficiency
                 </Link>
               </li>
               <li>
                 <Link to="/works">
-                <i className="icon fas fa-project-diagram"></i> Works
+                  <i className="icon fas fa-project-diagram"></i> Works
                 </Link>
               </li>
               <li>
                 <Link to="/contact">
-                <i className="icon fas fa-mail-bulk"></i> Contact
+                  <i className="icon fas fa-mail-bulk"></i> Contact
                 </Link>
               </li>
             </ul>
@@ -55,16 +56,17 @@ export default class layout extends Component {
               <div className="content_inner">
                 <Switch>
                   <Route path="/" exact component={Home} />
+                  <Route path="/Personal-Portfolio" exact component={Home} />
                   <Route path="/home" component={Home} />
                   <Route path="/skills" component={Skills} />
-                  <Route path="/works" component={Skills} />
+                  <Route path="/works" component={Works} />
                   <Route path="/contact" component={Skills} />
                 </Switch>
               </div>
             </main>
+          </div>
         </div>
-      </div>
-          </Router>
+      </Router>
     );
   }
 }

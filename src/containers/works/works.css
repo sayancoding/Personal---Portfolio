@@ -1,0 +1,44 @@
+.work{
+  margin-top: 2.8rem;
+}
+.work_heading{
+  position: relative;
+  z-index: 1000;
+  font-size: 2rem;
+}
+.work_heading::before{
+  content: '';
+  position: absolute;
+  z-index: 0;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  transform: translate(-20%,-40%);
+  background: rgba(16, 75, 236, 0.397);
+}
+.work_heading::after{
+  content: "";
+  position: absolute;
+    display: block;
+    height: 4px;
+    border-radius: 12px;
+    width: 200px;
+    background-color: rgba(16, 75, 236, 0.397);
+    transform: translate(40%,0%);
+}
+
+.work_heading p{
+  color: rgb(0, 0, 0);
+  z-index: 99999;
+}
+
+.work_area{
+  position: relative;
+  margin-top: 4rem;
+}
+.work_row{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}

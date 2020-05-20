@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import './skillCard.css'
+import React, { Component } from "react";
+import "./skillCard.css";
 
 export default class skillCard extends Component {
   render() {
@@ -7,15 +7,11 @@ export default class skillCard extends Component {
       <div>
         <div className="skill_card">
           <div className="text">
-    <p className="skill_title">{this.props.name}</p>
+            <p className="skill_title">{this.props.name}</p>
             <div className="skill_set">
-              {
-                this.props.skillSet.map(el=>{
-                  return(
-                  <p>{el}</p>
-                  )
-                })
-              }
+              {this.props.skillSet.map((el) => {
+                return <p>{el}</p>;
+              })}
               {/* <p>Java</p>
               <p>Javascript</p>
               <p>Typescript</p>

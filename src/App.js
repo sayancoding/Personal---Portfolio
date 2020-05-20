@@ -9,7 +9,7 @@ import Preloader from './components/preloader/preloader'
    componentDidMount(){
      setTimeout(() => {
        this.setState({landing:false})
-     }, 2000);
+     }, 1600);
    }
   render() {
     
