@@ -1,12 +1,15 @@
 import React, { Component } from "react";
+import {Link} from 'react-router-dom';
 import firebase from "../../firebase";
 import "./works.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import WorkCard from "../../components/workCard/workCard";
+import Loading from '../../components/preloader/loading'
 
 export default class works extends Component {
   state = {
+    loading:true,
     projects: [],
   };
   componentDidMount() {
@@ -22,6 +25,7 @@ export default class works extends Component {
         });
         this.setState({
           projects: temp,
+          loading:false
         });
         console.log(this.state.projects);
       })
@@ -35,6 +39,7 @@ export default class works extends Component {
         </div>
         <div className="work_area" data-aos="fade-up">
           <div className="work_row">
+            {this.state.loading && <Loading />}
             {this.state.projects &&
               this.state.projects.map((el) => {
                 return (
@@ -48,6 +53,11 @@ export default class works extends Component {
                 );
               })}
           </div>
+        </div>
+        <div className="more">
+          <Link onClick={(_) => window.open("https://github.com/sayancoding")}>
+            See More
+          </Link>
         </div>
       </div>
     );
