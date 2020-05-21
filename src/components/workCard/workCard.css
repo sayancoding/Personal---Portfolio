@@ -15,7 +15,7 @@
   height: 32%;
   background: rgba(28, 89, 255, 0.24);
   overflow: hidden;
-  clip-path: circle(266px at 40% -38%);
+  clip-path: circle(250px at 40% -38%);
   transition: 0.5s ease-in-out;
 }
 .work_card_upper .work_card_title{
