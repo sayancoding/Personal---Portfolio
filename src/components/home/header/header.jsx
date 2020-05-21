@@ -32,9 +32,11 @@ export default class header extends Component {
           student | developer | learner
         </div>
         <div className="btn-area">
+          <a href="#about">
           <button className="btn" data-aos="fade-up">
-            Explore Me <i class="fas fa-arrow-right"></i>
+            Explore Me <i className="fas fa-arrow-right"></i>
           </button>
+          </a>
         </div>
       </div>
     );

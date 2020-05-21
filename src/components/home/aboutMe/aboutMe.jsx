@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 import './aboutMe.css'
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -10,7 +11,7 @@ export default class aboutMe extends Component {
   }
   render() {
     return (
-      <div className="about">
+      <div className="about" id="about">
         <div data-aos="fade-left" className="text">
           <div className="heading">About me</div>
           <div className="lower-text" data-aos="fade-up">
@@ -28,9 +29,11 @@ export default class aboutMe extends Component {
               basis.
             </p>
           </div>
+          <Link to="skills">
           <button className="explore">
             Expand <i className="icon fas fa-expand-alt"></i>
           </button>
+          </Link>
         </div>
         <div className="image" data-aos="fade">
           <div className="_image">
