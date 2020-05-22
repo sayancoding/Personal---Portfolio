@@ -24,7 +24,7 @@
   left: 50%;
   transform: translate(-50%,-50%);
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 }
 .work_card_title_item{
   padding: 0 8px;
@@ -87,7 +87,7 @@
   margin-top: 3rem;
   display: flex;
   z-index: 20000;
-  justify-content: start;
+  justify-content: flex-start;
 }
 .action_row_item{
   padding: 2px 6px;

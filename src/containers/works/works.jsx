@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import {Link} from 'react-router-dom';
 import firebase from "../../firebase";
 import "./works.css";
 import Aos from "aos";
@@ -55,9 +54,9 @@ export default class works extends Component {
           </div>
         </div>
         <div className="more">
-          <Link onClick={(_) => window.open("https://github.com/sayancoding")}>
+          <p onClick={()=>window.open('https://github.com/sayancoding')}>
             See More
-          </Link>
+          </p>
         </div>
       </div>
     );

@@ -5,7 +5,7 @@ export default class preloader extends Component {
   render() {
     return (
       <div className="preloader">
-        <div class="water"></div>
+        <div className="water"></div>
       </div>
     );
   }

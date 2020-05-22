@@ -25,14 +25,14 @@ export default function workCard(props) {
           </div>
           <div className="action_row">
             <div className="action_row_item _1">
-              <Link onClick={(_) => window.open(props.source)}>
+              <p onClick={_=> window.open(props.source)}>
                 <i className="fas fa-expand-alt"></i>
-              </Link>
+              </p>
             </div>
             <div className="action_row_item _2">
-              <Link onClick={(_) => window.open(props.demo)}>
+              <p onClick={_=> window.open(props.demo)}>
                 <i className="fas fa-expand"></i>
-              </Link>
+              </p>
             </div>
           </div>
         </div>
