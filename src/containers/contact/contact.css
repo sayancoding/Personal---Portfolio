@@ -1,0 +1,65 @@
+.contact{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.contact_head{
+  font-size: 2rem;
+}
+.contact_footer{
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  z-index: -12;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.contact input[type="text"]{
+  border: 2px solid rgb(30, 32, 180);
+  padding: 8px 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  width: 16rem;
+  height: 1.4rem;
+  font-size: 1.1rem;
+  outline: none;
+  transition: 0.2s ease-out;
+}
+.contact input[type="submit"]{
+  border: none;
+  padding: 8px 10px;
+  margin-top: 8px;
+  border-radius: 4px;
+  outline: none;
+  background-color: rgb(41, 44, 223);
+  color: white;
+  cursor: pointer;
+  box-shadow: 1px 12px 18px rgb(192, 192, 192);
+  transition: 0.2s ease-in-out;
+}
+.contact input[type="submit"]:hover{
+    box-shadow: 1px 12px 20px rgb(128, 128, 128);
+}
+.contact input[type="submit"]:active{
+    box-shadow: 1px 12px 20px rgb(128, 128, 128);
+    transform: translateY(6%);
+}
+.contact input[type="submit"]:disabled{
+    background-color: rgb(207, 207, 207);
+    box-shadow: 1px 12px 20px rgb(128, 128, 128);
+    color: black;
+    cursor: not-allowed;
+}
+
+.contact input[type="text"]:hover{
+  box-shadow: 1px 12px 20px rgb(233, 233, 233);
+  border-color: rgb(83, 86, 243);
+}
+.contact input[type="text"]:focus{
+  box-shadow: 2px 10px 20px rgb(233, 233, 233);
+  border-color: rgb(83, 86, 243);
+}
