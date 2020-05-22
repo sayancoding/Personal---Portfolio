@@ -18,19 +18,19 @@ export default class footer extends Component {
           <div className="footer_link">
             <ul>
               <li>
-                <Link onClick={_=>window.open("https://github.com/sayancoding")}>
+                <p onClick={_=>window.open("https://github.com/sayancoding")}>
                   <i class="fab fa-github-alt"></i>
-                </Link>
+                </p>
               </li>
               <li>
-                <Link onClick={_=>window.open("https://www.instagram.com/backward_space/")}>
+                <p onClick={_=>window.open("https://www.instagram.com/backward_space/")}>
                   <i class="fab fa-instagram"></i>
-                </Link>
+                </p>
               </li>
               <li>
-                <Link onClick={_=>window.open("https://www.linkedin.com/in/sayan-maity-6316921a6/")}>
+                <p onClick={_=>window.open("https://www.linkedin.com/in/sayan-maity-6316921a6/")}>
                   <i class="fab fa-linkedin"></i>
-                </Link>
+                </p>
               </li>
             </ul>
           </div>
