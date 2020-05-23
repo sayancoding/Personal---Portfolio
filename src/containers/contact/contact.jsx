@@ -7,6 +7,12 @@ export default class contact extends Component {
   state = {
     name: "",
     email: "",
+    isCorrect:false,
+    nameFlag : false,
+    emailFlag : false,
+    error:{
+      message:''
+    }
   };
   componentDidMount() {
     Aos.init({ duration: 2000 });
@@ -18,7 +24,32 @@ export default class contact extends Component {
   };
   onHandleChanger = (event) => {
     const { name, value } = event.target;
+    let error = this.state.error;
+    const validEmailRegex = RegExp(
+        /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+      );
+    switch(name){
+      case 'name':
+        error.message = value.length<3 ? ' name must be more 3 character':'';
+        value.length<3 ? this.setState({nameFlag:false}):this.setState({nameFlag:true})
+      break;
+      case 'email':
+        error.message = validEmailRegex.test(value)
+          ? ""
+          : "field must be filled correctly";
+          
+        validEmailRegex.test(value)
+          ? this.setState({ emailFlag: true })
+          : this.setState({ emailFlag: false });
+      break;
+      default:
+      break;
+    }
     this.setState({ [name]: value });
+    if(this.state.nameFlag&&this.state.email){
+      this.setState({isCorrect:true})
+    }
+    console.log(this.state.isCorrect);
   };
 
   sendRequest() {
@@ -56,7 +87,13 @@ export default class contact extends Component {
             onChange={this.onHandleChanger}
           />
           <br />
-          <input type="submit" value="Touch" disabled="true"/>
+          <p className="error">{`${this.state.error.message}`}</p>
+          <br />
+            <input
+              type="submit"
+              value="Touch"
+              disabled={!this.state.isCorrect}
+            />
         </form>
         <div className="contact_footer">
           <div className="footer">
