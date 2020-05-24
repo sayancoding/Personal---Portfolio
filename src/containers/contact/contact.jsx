@@ -73,6 +73,7 @@ export default class contact extends Component {
           nameFlag: false,
           emailFlag: false,
         });
+        alert("You've got a mail ✉.Thanks 🙂");
       })
       .catch((err) => console.log(err));
   }
