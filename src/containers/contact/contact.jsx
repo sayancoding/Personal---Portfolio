@@ -19,15 +19,19 @@ export default class contact extends Component {
   }
   handleSubmit = (event) => {
     console.log(this.state);
+    this.setState({
+      isCorrect: false,
+    });
     this.sendRequest();
+    
     event.preventDefault();
   };
   onHandleChanger = (event) => {
     const { name, value } = event.target;
     let error = this.state.error;
     const validEmailRegex = RegExp(
-        /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-      );
+        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+
     switch(name){
       case 'name':
         error.message = value.length<3 ? ' name must be more 3 character':'';
@@ -60,7 +64,16 @@ export default class contact extends Component {
     };
     fetch("https://safe-citadel-44687.herokuapp.com/sendmail", reqOp)
       .then((res) => res.json())
-      .then((resBack) => console.log(resBack))
+      .then((resBack) => {
+        console.log(resBack)
+        this.setState({
+          name: "",
+          email: "",
+          isCorrect: false,
+          nameFlag: false,
+          emailFlag: false,
+        });
+      })
       .catch((err) => console.log(err));
   }
 
