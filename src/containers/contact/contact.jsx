@@ -58,7 +58,7 @@ export default class contact extends Component {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(this.state),
     };
-    fetch("http://localhost:4000/sendmail", reqOp)
+    fetch("https://safe-citadel-44687.herokuapp.com/sendmail", reqOp)
       .then((res) => res.json())
       .then((resBack) => console.log(resBack))
       .catch((err) => console.log(err));
