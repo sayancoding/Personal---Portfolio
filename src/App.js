@@ -4,7 +4,7 @@ import Preloader from './components/preloader/preloader'
 
  class App extends Component {
    state={
-     landing:false
+     landing:true
    }
    componentDidMount(){
      setTimeout(() => {
