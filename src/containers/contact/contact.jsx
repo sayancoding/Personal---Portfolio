@@ -22,6 +22,7 @@ export default class contact extends Component {
     this.setState({
       isCorrect: false,
     });
+    alert("please wait a while 🕑")
     this.sendRequest();
     
     event.preventDefault();
